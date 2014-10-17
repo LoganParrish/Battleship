@@ -17,7 +17,7 @@ namespace Battleship
         public int HighScoreID { get; set; }
         public string Name { get; set; }
         public Nullable<int> Score { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.DateTime> DateCreated { get; set; }
         public string Game { get; set; }
     }
 }

@@ -49,23 +49,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grid.cs" />
-    <Compile Include="HighScore.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HighScore.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="HighScore.cs">
-      <DependentUpon>HighScore.tt</DependentUpon>
+      <DependentUpon>HighScores.tt</DependentUpon>
     </Compile>
-    <Compile Include="HighScore.Designer.cs">
+    <Compile Include="HighScores.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HighScore.edmx</DependentUpon>
+      <DependentUpon>HighScores.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HighScore1.cs">
+    <Compile Include="HighScores.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HighScore.tt</DependentUpon>
+      <DependentUpon>HighScores.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HighScores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HighScores.edmx</DependentUpon>
     </Compile>
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
@@ -74,22 +74,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="HighScore.edmx">
+    <EntityDeploy Include="HighScores.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HighScore.Designer.cs</LastGenOutput>
+      <LastGenOutput>HighScores.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="HighScore.Context.tt">
+    <None Include="HighScores.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HighScore.edmx</DependentUpon>
-      <LastGenOutput>HighScore.Context.cs</LastGenOutput>
+      <DependentUpon>HighScores.edmx</DependentUpon>
+      <LastGenOutput>HighScores.Context.cs</LastGenOutput>
     </None>
-    <None Include="HighScore.edmx.diagram">
-      <DependentUpon>HighScore.edmx</DependentUpon>
+    <None Include="HighScores.edmx.diagram">
+      <DependentUpon>HighScores.edmx</DependentUpon>
     </None>
-    <None Include="HighScore.tt">
+    <None Include="HighScores.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HighScore.edmx</DependentUpon>
-      <LastGenOutput>HighScore1.cs</LastGenOutput>
+      <DependentUpon>HighScores.edmx</DependentUpon>
+      <LastGenOutput>HighScores.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

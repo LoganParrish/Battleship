@@ -13,10 +13,10 @@ namespace Battleship
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LoganEntities : DbContext
+    public partial class LoganEntities1 : DbContext
     {
-        public LoganEntities()
-            : base("name=LoganEntities")
+        public LoganEntities1()
+            : base("name=LoganEntities1")
         {
         }
     

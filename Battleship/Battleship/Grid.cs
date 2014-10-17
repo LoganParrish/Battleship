@@ -151,10 +151,10 @@ namespace Battleship
             Console.WriteLine("Add your name to the highscores: ");
             string playerName = Console.ReadLine();
 
-            LoganEntities db = new LoganEntities();
+            LoganEntities1 db = new LoganEntities1();
 
             HighScore newHighScore = new HighScore();
-            newHighScore.Date = DateTime.Now;
+            newHighScore.DateCreated = DateTime.Now;
             newHighScore.Name = playerName;
             newHighScore.Game = "Battleship";
             newHighScore.Score = playerScore;
@@ -171,13 +171,13 @@ namespace Battleship
             Console.WriteLine("\n");
             Console.ResetColor();
 
-            LoganEntities db = new LoganEntities();
+            LoganEntities1 db = new LoganEntities1();
             List<HighScore> highScoreList = db.HighScores.Where(x => x.Game == "Battleship").OrderBy(x => x.Score).Take(10).ToList();
 
             foreach (HighScore highScore in highScoreList)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("{0}. {1} - Took {2} turns to sink all ships  - {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.Date.Value.ToShortDateString());
+                Console.WriteLine("{0}. {1} - Took {2} turns to sink all ships  - {3}", highScoreList.IndexOf(highScore) + 1, highScore.Name, highScore.Score, highScore.DateCreated.Value.ToShortDateString());
                 Console.ResetColor();
             }
         }

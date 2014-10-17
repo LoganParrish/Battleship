@@ -15,7 +15,7 @@
           <Property Name="HighScoreID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Score" Type="int" />
-          <Property Name="Date" Type="datetime" />
+          <Property Name="DateCreated" Type="datetime" />
           <Property Name="Game" Type="nvarchar" MaxLength="50" />
         </EntityType>
       </Schema>
@@ -23,7 +23,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LoganModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="LoganEntities" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="LoganEntities1" p1:LazyLoadingEnabled="true">
           <EntitySet Name="HighScores" EntityType="LoganModel.HighScore" />
         </EntityContainer>
         <EntityType Name="HighScore">
@@ -33,7 +33,7 @@
           <Property Name="HighScoreID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Score" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="DateCreated" Type="DateTime" Precision="3" />
           <Property Name="Game" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
       </Schema>
@@ -41,14 +41,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LoganModelStoreContainer" CdmEntityContainer="LoganEntities">
+        <EntityContainerMapping StorageEntityContainer="LoganModelStoreContainer" CdmEntityContainer="LoganEntities1">
           <EntitySetMapping Name="HighScores">
             <EntityTypeMapping TypeName="LoganModel.HighScore">
               <MappingFragment StoreEntitySet="HighScores">
                 <ScalarProperty Name="HighScoreID" ColumnName="HighScoreID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Score" ColumnName="Score" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
                 <ScalarProperty Name="Game" ColumnName="Game" />
               </MappingFragment>
             </EntityTypeMapping>
